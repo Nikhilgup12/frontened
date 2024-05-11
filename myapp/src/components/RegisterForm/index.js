@@ -2,7 +2,7 @@ import {Component} from "react"
 import "./index.css" 
 
 class RegisterForm extends Component{
-    state={username:"",email:"",password:""} 
+    state={username:"",email:"",password:"",message:""} 
 
     onUsername =(event)=>{
         this.setState({username:event.target.value})
@@ -20,7 +20,7 @@ class RegisterForm extends Component{
         event.preventDefault()  
         const {username,password,email}= this.state 
         const userdetails = {username,password,email}
-        const url="" 
+        const url="https://organic-react-login-app-deploy.onrender.com/register" 
         const options={
             method:"POST",
             headers:{
@@ -31,11 +31,21 @@ class RegisterForm extends Component{
         }
         const response = await fetch(url,options) 
         const data = await response.json()
+        if (response.ok ==true){
+            this.setState({message:"success"}) 
+        }
+        else{
+            this.setState({message:"error"}) 
+        }
+        console.log(response)
+        
+        
+        
 
     }
 
     render(){
-        const {username,password,email}= this.state 
+        const {username,password,email,message}= this.state 
 
         return (
             <>
@@ -55,6 +65,7 @@ class RegisterForm extends Component{
                             <input type="password" onChange={this.onPassword} placeholder="Enter Password"  id="password" value={password} /> 
                         </div> 
                         <button type="submit"> Submit </button>
+                        <p> {message} </p>
                     </form>
                 </div>
              </div>
