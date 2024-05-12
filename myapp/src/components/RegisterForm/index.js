@@ -20,7 +20,7 @@ class RegisterForm extends Component{
         event.preventDefault()  
         const {username,password,email}= this.state 
         const userdetails = {username,password,email}
-        const url="https://organic-react-login-app-deploy.onrender.com/register" 
+        const url="https://react-login-app.onrender.com/register" 
         const options={
             method:"POST",
             headers:{
@@ -29,18 +29,15 @@ class RegisterForm extends Component{
             },
             body:JSON.stringify(userdetails)
         }
+
         const response = await fetch(url,options) 
         const data = await response.json()
-        if (response.ok ==true){
-            this.setState({message:"success"}) 
+        if (response.ok == true){
+            this.setState({message:data.message})
         }
         else{
-            this.setState({message:"error"}) 
+            this.setState({message:data.message})
         }
-        console.log(response)
-        
-        
-        
 
     }
 
