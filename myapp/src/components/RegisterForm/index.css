@@ -4,5 +4,74 @@
     align-items: center; 
     justify-content: center; 
     height: 100vh; 
+    width: 100%;
+    max-width: 1110px;
+    margin:auto;
+    background-color: #FFFFFF;
+}
+
+.form-container{
+    display: flex; 
+    flex-direction: column; 
+    width: 100%;
+    max-width: 300px;
+    padding:20px;
     
+} 
+
+.register-container{
+    display: flex; 
+    flex-direction: column;
+    text-align: center;
+   align-items: center;
+    
+}
+.register-heading{
+    margin-bottom: 0px;
+    font-family: Roboto;
+}
+.username-container{
+    width: 100%; 
+    margin-bottom:6px;
+    
+}
+.username-label{
+  font-size: 13px;
+  font-family: Roboto;
+  color: #1e293b;
+} 
+.username-input{
+  margin-top:5px;
+  padding: 10px 5px 10px 5px;
+  width: 100%;
+  outline: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #94a3b8;
+  border-radius: 5px;
+}
+.register-button{
+    margin-top: 10px;
+    padding: 10px 5px 10px 5px;
+    width: 100%;
+    outline: none;
+    border-radius:5px;
+    border-width: 0px;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size:20px;
+}
+.register-error-para{
+    margin-top: 0px;
+    padding-top: 5px; 
+    color: red;
+    font-size: 14px;
+}
+.already-account-para{
+    text-align: center;
+    margin-top: 0px;
+    margin:0px;
+    padding-top: 0px;
 }
