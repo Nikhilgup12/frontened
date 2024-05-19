@@ -1,9 +1,17 @@
 import React, { Component } from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./index.css";
 
 class RegisterForm extends Component {
-  state = { username: "", email: "", password: "", message: "", onSubmitError: false };
+  state = { 
+    username: "", 
+    email: "", 
+    password: "", 
+    message: "", 
+    onSubmitError: false, 
+    isRegistered: false,
+    successMessage: ""
+  };
 
   onUsername = (event) => {
     this.setState({ username: event.target.value });
@@ -17,9 +25,12 @@ class RegisterForm extends Component {
     this.setState({ email: event.target.value });
   }
 
-  onSuccess = () => {
-    const { history } = this.props;
-    history.replace("/login");
+  onSuccess = (successMessage) => {
+    this.setState({ isRegistered: true, successMessage });
+    setTimeout(() => {
+      const { history } = this.props;
+      history.replace("/login");
+    }, 2000); // Redirect after 2 seconds
   }
 
   onFailure = (error) => {
@@ -43,7 +54,7 @@ class RegisterForm extends Component {
     const response = await fetch(url, options);
     const data = await response.json();
     if (response.ok === true) {
-      this.onSuccess();
+      this.onSuccess(data.message);
     } else {
       this.onFailure(data.message);
     }
@@ -80,7 +91,7 @@ class RegisterForm extends Component {
   }
 
   render() {
-    const { message, onSubmitError } = this.state;
+    const { message, onSubmitError, isRegistered, successMessage } = this.state;
     return (
       <div className="register-page-main-container">
         <form onSubmit={this.onSubmitForm} className="form-container">
@@ -98,7 +109,8 @@ class RegisterForm extends Component {
             {this.renderInputEmail()}
           </div>
           <button type="submit" className="register-button"> Create Account </button>
-          {onSubmitError && <p className="register-error-para"> *{message} </p>}
+          {onSubmitError && !isRegistered && <p className="register-error-para"> *{message} </p>}
+          {isRegistered && <p className="register-success-para"> {successMessage} Redirecting to login page... </p>}
           <p className="already-account-para"> Already have an account? <Link to="/login" >Login</Link></p>
         </form>
       </div>
@@ -106,4 +118,4 @@ class RegisterForm extends Component {
   }
 }
 
-export default RegisterForm
+export default RegisterForm;

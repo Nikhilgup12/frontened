@@ -70,6 +70,13 @@
     color: red;
     font-size: 14px;
 }
+.register-success-para{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top:5px; 
+    color:green;
+    font-size: 14px;
+}
 .already-account-para{
     text-align: center;
     margin-top: 0px;
