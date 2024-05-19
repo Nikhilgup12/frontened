@@ -73,7 +73,7 @@ class LoginForm extends Component{
         if (jwtToken !== undefined){
             return <Redirect to="/" /> 
         }
-        
+
         return (
             <>
              <div className="register-page-main-container">
