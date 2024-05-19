@@ -1,20 +1,20 @@
-import {BrowserRouter,Routes,Route} from "react-router-dom"
-import RegisterForm  from "./components/RegisterForm"
-import LoginForm  from "./components/LoginForm"
-import Home from "./components/Home" 
-import ProtectedRoute  from "./components/ProtectedRoute"
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import RegisterForm from "./components/RegisterForm";
+import LoginForm from "./components/LoginForm";
+import Home from "./components/Home";
+import ProtectedRoute from "./components/ProtectedRoute";
 import './App.css';
 
-const App=()=>{
+const App = () => {
   return (
     <BrowserRouter>
-    <Routes>
-      <Route exact path="/register" element={<RegisterForm />} /> 
-      <ProtectedRoute  exact path="/login" element={<LoginForm />} /> 
-      <ProtectedRoute  exact path="/" element={<Home />} /> 
-    </Routes>
+      <Switch>
+        <Route exact path="/register" component={RegisterForm} />
+        <Route exact path="/login" component={LoginForm} />
+        <ProtectedRoute exact path="/" component={Home} />
+      </Switch>
     </BrowserRouter>
-  )
+  );
 }
 
 export default App;
