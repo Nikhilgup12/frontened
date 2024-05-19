@@ -1,9 +1,9 @@
 import {Component} from "react" 
-import {Link,useNavigate} from "react-router-dom" 
+import {Link} from "react-router-dom" 
 import "./index.css" 
 
 class RegisterForm extends Component{
-    state={username:"",email:"",password:"",message:""} 
+    state={username:"",email:"",password:"",message:"",onSubmitError:false} 
 
     onUsername =(event)=>{
         this.setState({username:event.target.value})
@@ -23,7 +23,7 @@ class RegisterForm extends Component{
     } 
 
     onFailure=(error)=>{
-        this.setState({message:error})
+        this.setState({onSubmitError:true, message:error})
     } 
 
     onSubmitForm = async (event)=>{
@@ -84,7 +84,7 @@ class RegisterForm extends Component{
     }
 
     render(){
-        const {message}= this.state 
+        const {message,onSubmitError}= this.state 
         return (
             <>
              <div className="register-page-main-container">
@@ -103,7 +103,7 @@ class RegisterForm extends Component{
                             {this.renderInputEmail()} 
                         </div> 
                         <button type="submit" className="register-button"> Create Account  </button>
-                        <p className="register-error-para"> {message} </p>
+                        {onSubmitError &&  <p className="register-error-para"> *{message} </p> } 
                         <p className="already-account-para"> Already have an account? <Link to="/login">Login  </Link></p>
                     </form>
              </div>

@@ -65,7 +65,8 @@
 }
 .register-error-para{
     margin-top: 0px;
-    padding-top: 5px; 
+    margin-bottom: 0px;
+    padding-top:5px; 
     color: red;
     font-size: 14px;
 }
@@ -73,5 +74,5 @@
     text-align: center;
     margin-top: 0px;
     margin:0px;
-    padding-top: 0px;
+    padding-top:15px;
 }
