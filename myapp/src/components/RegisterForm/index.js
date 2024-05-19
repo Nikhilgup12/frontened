@@ -1,5 +1,5 @@
 import {Component} from "react" 
-import {Link} from "react-router-dom" 
+import {Link,useNavigate} from "react-router-dom" 
 import "./index.css" 
 
 class RegisterForm extends Component{
@@ -106,7 +106,6 @@ class RegisterForm extends Component{
                         <p className="register-error-para"> {message} </p>
                         <p className="already-account-para"> Already have an account? <Link to="/login">Login  </Link></p>
                     </form>
-              
              </div>
             </>
         )
@@ -114,6 +113,6 @@ class RegisterForm extends Component{
 } 
 
 
-export default RegisterForm 
+export default RegisterForm
 
 
