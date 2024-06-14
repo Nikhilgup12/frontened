@@ -1,4 +1,4 @@
-import Popup from 'reactjs-popup'
+// import Popup from 'reactjs-popup'
 import Cookies from 'js-cookie'
 import {withRouter, Link} from 'react-router-dom' 
 import "./index.css" 
@@ -15,41 +15,41 @@ const NavbarMobile = props => {
     return (
       <>
         <nav className='navbar-mobile'> 
-          <div>
-            <div>
-              <img src="https://assets.ccbp.in/frontend/react-js/nxt-watch-profile-img.png" alt="user" />
-              <button onClick={closeNavbar}>&times;</button>
+            <div className='navbar-mobile-cross-container'>
+              <button onClick={closeNavbar} className='navbar-mobile-cross-button'>&times;</button>
             </div>
-            <div>
-              <div>
-                <Link to="/">
-                  <div>
-                    <p> Everything  </p>
-                  </div>
-                </Link>
-                <Link to="/trending">
-                  <div>
-                    <p> Groceries  </p>
-                  </div>
-                </Link>
-                <Link to="/gaming">
-                  <div>
-                    <p> Juices  </p>
-                  </div>
-                </Link>
-                <Link to="/gaming">
-                  <div>
-                    <p> About  </p>
-                  </div>
-                </Link>
-                <Link to="/gaming">
-                  <div>
-                    <p> Contact </p>
-                  </div>
-                </Link>
+            
+            <div className='navbar-container'>
+                <div className='nav-mobile-item'>
+                    <p className='nav-menu-items'> About us  </p>
+                </div>
+                <div className='nav-mobile-item'>
+              
+                    <p className='nav-menu-items'>  Dental Treatments </p>
+               
+                </div>
+                <div className='nav-mobile-item'>
+              
+                    <p className='nav-menu-items'>  Facial Aesthetics    </p>
+              
+                </div>
+                <div className='nav-mobile-item'>
+             
+                    <p className='nav-menu-items'> Contact   </p>
+             
+                </div>
+                <div className='nav-mobile-item'>
+             
+               <button className='navbar-mobile-logout'  onClick={onLogoutBtn}> Logout </button>
+      
+         </div>
+                </div> 
+              
+           
+           </nav> 
                 
-                <Popup
-                  modal
+                {/* <Popup
+                  modal 
                   trigger={
                     <div>
                       <button>Logout</button>
@@ -71,11 +71,9 @@ const NavbarMobile = props => {
                       </div>
                     </div>
                   )}
-                </Popup>
-              </div> 
-              </div>
-              </div>
-              </nav>  
+                </Popup> */}
+              
+              
               </> 
  )
  } 

@@ -1,0 +1,188 @@
+*{
+    margin:0px;
+    box-sizing: border-box;
+}
+.grocery-header-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding:40px;
+    background-color: #f8f6f3;
+}
+.grocery-home-main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+.organic-header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding:25px;
+    margin-top:40px;
+}
+
+.organic-header-carrybag-image{
+    width: 100%;
+    max-width: 500px;
+}
+.organic-leaf-container{
+    padding:60px;
+    width: 100%;
+    max-width:750px;
+}
+.organic-leaf-image{
+    width: 100%;
+    max-width: 80px;
+    padding-bottom:17px;
+}
+.grocery-discription{
+    font-family: Roboto; 
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+.grocery-heading{
+    font-size:50px;
+    line-height: 60px;
+    font-family:sans-serif;
+    padding-bottom:15px;
+}
+.grocery-des{
+    padding-bottom: 18px;
+    font-size: 17px;
+}
+.grocery-button{
+    background-color: #6a9739;
+    height: 50px;
+    width: 155px;
+    border-width: 0;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shopping-icon{
+    color: #ffffff;
+    padding-right:16px;
+    font-size:35px;
+}
+.shopping-span-para{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+}
+@media screen and (max-width:767px){
+    .organic-header-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .grocery-header-container{
+        padding:0px;
+    }
+    .organic-leaf-container{
+        /* background-color: antiquewhite; */
+        padding:10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .grocery-heading{
+        font-size:30px;
+        line-height:40px;
+    }
+    .grocery-des{
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (min-width:768px) and (max-width:991px){
+    .grocery-header-container{
+        padding:10px;
+       
+        
+    }
+    .organic-header-container{
+        padding:10px;
+        
+    }
+    .organic-leaf-container{
+      
+        padding:10px;
+        max-width:350px;
+    }
+    .organic-header-carrybag-image{
+        max-width:350px;
+    }
+    .grocery-heading{
+        font-size: 25px;
+        line-height:40px;
+    }
+    .organic-leaf-image{
+        max-width: 50px;
+    }
+}
+
+.organic-free-shipping-container{
+    background-color: #111111;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding:30px;
+}
+.organic-free-shipping{
+    background-color: #333333;
+    border-radius:5px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    padding:30px;
+    width: 100%;
+    max-width:280px;
+    margin: 10px;
+    padding-bottom:40px;
+}
+.shipping-truck-icon{
+    color: #8bc34a;
+    font-size: 35px;
+}
+.shipping-heading{
+    color: #ffffff;
+    font-size: 23px;
+    font-family: Serif;
+    font-weight: 700;
+    padding-bottom: 7px;
+}
+.shipping-para{
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Sans-Serif;
+}
+
+@media screen and (max-width:767px){
+    .organic-free-shipping{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 350px;
+    }
+    .shipping-truck-icon{
+        padding-bottom: 12px;
+        font-size:40px;
+    }
+    .shipping-heading{
+        padding-bottom: 10px;
+        font-size:30px;
+    }
+}

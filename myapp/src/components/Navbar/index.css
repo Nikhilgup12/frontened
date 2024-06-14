@@ -1,3 +1,8 @@
+*{
+    margin:0px;
+    box-sizing: border-box;
+}
+
 .nav-container{
     display: flex;
     flex-direction: row;
@@ -5,7 +10,7 @@
     align-items: center;
     width: 100%;
     max-width: 11110px; 
-    padding:3px;
+    padding:5px;
 }
 .nav-content{
     display: flex;
@@ -13,7 +18,8 @@
     align-items: center;
     width: 95%;
     max-width: 11110px;
-   
+    padding-top: 10px;
+    padding-bottom: 10px;
 } 
 .nav-item-list{
     display: flex;
@@ -25,6 +31,16 @@
     width: 100%;
     max-width: 400px;
 }
+
+.nav-item {
+    font-size: 18px; 
+    font-family: Poppins, sans-serif;
+    color: #1E1E1E;
+    font-weight: 400;
+    padding: 10px 0; /* Add padding for better click area */
+    cursor: pointer;
+    
+}
 .nav-secton-list{
     display: flex;
     flex-direction: row;
@@ -33,7 +49,8 @@
     padding-left: 0px;
     list-style: none;
     width: 100%;
-    max-width:240px;
+    max-width:270px;
+    /* padding:10px; */
 }
 .nav-section-mobile-list{
     display: flex;
@@ -49,6 +66,17 @@
     width: 100%;
     max-width: 100px;
 } 
+.nav-logout-button{
+    background-color:rgb(192, 217, 153);
+    border-width: 0px;
+    padding:12px 15px 12px 15px;
+    border-radius: 5px;
+    font-size: 18px; 
+    font-family:Roboto;
+    color: #1E1E1E;
+    font-weight: 400;
+    cursor: pointer;
+}
 .nav-logo-mobile{
     width: 100%;
     max-width: 100px;
